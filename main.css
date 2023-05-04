@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #191a21;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+.mainApp {
+  z-index: 1;
+  padding-top: 20px;
+  width: clamp(880px, 100%, 1300px);
+}
+/* NAVBAR START */
+.navbar {
+  background: #1c1e27;
+  width: 100%;
+  height: 75px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.navbar--left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.navbar .homeBtn {
+  background: #795eb9;
+  height: 100%;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .homeBtn:hover {
+  background: #8e6eda;
+}
+.navbar img {
+  height: 30px;
+}
+.navbar ul {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  list-style: none;
+  color: white;
+  font-size: 10px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.navbar li h2:hover {
+  color: #795eb9;
+}
+svg:hover .svgFill {
+  fill: #795eb9;
+}
+.socialList--right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 15px;
+}
+.socialList {
+  margin-right: 15px;
+}
+.socialList--right .menuBtn svg {
+  cursor: pointer;
+}
+@media screen and (max-width: 1100px) {
+  .navbar {
+    height: 60px;
+  }
+  .navbar .homeBtn {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .mainApp {
+    width: 90vw;
+  }
+  .navbar {
+    height: 60px;
+  }
+  .navbar .homeBtn {
+    width: 60px;
+  }
+  div.navList {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+}
+@media screen and (min-width: 611px) {
+  .menuBtn {
+    display: none;
+  }
+}
+.hiddenMenu {
+  margin-top: 5px;
+  position: absolute;
+  width: 90vw;
+  color: white;
+}
+.hiddenMenu ul {
+  list-style: none;
+  border-radius: 8px;
+  background: #1c1e27;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+/* NAVBAR END */
+/* MAIN CONTENT */
+.mainContent {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.mainContent--left {
+  background: #1c1e27;
+  padding: 0px 15px 0px 15px;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+noscript {
+  color: white;
+}
