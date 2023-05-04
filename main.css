@@ -10,6 +10,7 @@ body {
   z-index: 1;
   padding-top: 20px;
   width: clamp(880px, 100%, 1300px);
+  margin: 0px 10px 0px 10px;
 }
 /* NAVBAR START */
 .navbar {
