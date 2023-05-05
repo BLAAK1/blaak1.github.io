@@ -263,11 +263,11 @@ svg:hover .svgFill {
 }
 .cert {
   display: flex;
-  align-items: center;
+  justify-content: center;
   flex-direction: column;
   background: #191a21;
   width: 90%;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   border-radius: 8px;
 }
 .cert-child {

@@ -125,7 +125,6 @@ const cert1 = {
   when: "Maj 2020",
   title: "NDG Linux Essentials",
   from: "Cisco",
-  description: "",
 };
 const cert2 = {
   type: "Kwalifikacja",
@@ -293,7 +292,7 @@ function showExperience() {
       <h3>${e.type} ${e.title}</h3>
       <p>${e.when} <br>Wydane przez: ${e.from}</p>
     </div>
-      <p>${e.description}</p>
+    ${e.description == undefined ? "" : `<p>${e.description}</p>`}
     </div>
   </div>`;
     certificatesBox.insertAdjacentHTML("afterbegin", pattern);
@@ -301,13 +300,4 @@ function showExperience() {
 }
 
 experienceBtn.addEventListener("click", showExperience);
-// showExperience();
 // MAIN EXPERIENCE FUNC END
-
-// const cert3 = {
-// type: "Certyfikat",
-//   when: "Marzec 2022",
-//   title: "EE.09",
-//   from: "OKE",
-//   description: "Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych",
-// };
