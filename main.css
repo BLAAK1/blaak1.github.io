@@ -15,6 +15,7 @@ body {
   padding-top: 20px;
   width: clamp(880px, 100%, 1300px);
   margin: 0px 10px 0px 10px;
+  padding-bottom: 20px;
 }
 /* NAVBAR START */
 .navbar {
