@@ -116,15 +116,17 @@ svg:hover .svgFill {
   padding-bottom: 0.2rem;
 }
 .mainContent--right {
-  margin: 20px 0px 0px 20px;
-  padding: 0px 20px 0px 20px;
-  border-radius: 8px;
+  background: #191a21;
+}
+.mainContent-content {
   background: #1c1e27;
+  margin: 20px 0px 0px 20px;
+  padding: 10px 20px 0px 20px;
+  border-radius: 8px;
 }
 .card {
   width: 45%;
 }
-
 .aboutMe {
   width: 80%;
 }
@@ -168,7 +170,60 @@ svg:hover .svgFill {
 .tech .progressBar:hover .progressBar--inner {
   background-color: #8e6eda;
 }
-
+.myLanguages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.lang-start h3 {
+  font-size: 1rem;
+  border-bottom: 2px solid #795eb9;
+  width: fit-content;
+  padding: 0px 5px 5px 5px;
+}
+.languages {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 20px 0px;
+}
+.lang {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-right: 10px;
+}
+.lang-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.lang-name {
+  height: fit-content;
+  margin: 0px 10px 0px 10px;
+}
+.lang-name > * {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+}
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: #1c1e27;
+  margin: 20px 0px 0px 20px;
+  padding: 5px 20px 5px 20px;
+  border-radius: 8px;
+}
+.footer a {
+  text-decoration: none;
+  color: #8e6eda;
+}
 .hidden {
   display: none;
 }
@@ -212,6 +267,15 @@ noscript {
     margin: 20px 0px 0px 0px;
     flex-direction: column;
   }
+  .footer {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .mainContent-content {
+    padding: 5px 5px 0px 5px;
+    margin: 10px 0px 0px 0px;
+  }
   .tech {
     display: flex;
     flex-direction: column;
@@ -228,5 +292,18 @@ noscript {
   }
   .card {
     width: 100%;
+  }
+  .languages {
+    flex-direction: column;
+  }
+  .lang {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .footer {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 0px 5px 0px;
   }
 }

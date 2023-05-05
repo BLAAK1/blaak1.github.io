@@ -1,7 +1,7 @@
 "use strict";
 const homeBtn = document.querySelector(".homeBtn");
 const experienceBtn = document.querySelector(".experience");
-const content = document.querySelector(".mainContent--right");
+const content = document.querySelector(".mainContent-content");
 
 function showHomePage() {
   const myPromise = new Promise(() => {});
@@ -13,7 +13,7 @@ function showHomePage() {
       `<div class="aboutMe card">
       <h3>O mnie</h3>
       <p>
-        Jestem studentem Wyższej Szkoły Informatyki i Zarządzania w Rzeszowie, którego celem jest zostać front-end developerem. Dobrze znam HTML i CSS oraz JavaScript. Chcę rozwijać się w
+        Jestem studentem Wyższej Szkoły Informatyki i Zarządzania w Rzeszowie, którego celem jest zostać FullStack developerem. Dobrze znam HTML i CSS oraz JavaScript. Chcę rozwijać się w
         technologii Java Script oraz PHP. Moje zalety to umiejętność pracy w zespole, szybkie uczenie się oraz pracowitość i zaangażowanie.
       </p>
     </div>
@@ -26,7 +26,14 @@ function showHomePage() {
         <h3>Oprogramowanie, które znam</h3>
         <ul class="allPrograms"></ul>
       </div>
-    </div>`
+    </div>
+    <div class="myLanguages">
+    <div class="lang-start">
+      <h3>Jakie znam języki?</h3>
+    </div>
+    <div class="languages">
+    </div>
+  </div>`
     );
   };
 
@@ -83,11 +90,31 @@ function showHomePage() {
     knowledge: "Podstawy",
     progressBar: 15,
   };
+  // Languages
+  const ENGLISH = {
+    classname: "emglish",
+    name: "Angielski",
+    knowledge: "Dobrze (B1)",
+    img: "../content/flags/en.png",
+  };
+  const POLISH = {
+    classname: "polish",
+    name: "Polski",
+    knowledge: "Narodowy",
+    img: "../content/flags/pl.png",
+  };
+  const RUSIAN = {
+    classname: "rusian",
+    name: "Rosyjski",
+    knowledge: "Podstawy",
+    img: "../content/flags/ru.png",
+  };
+  const Languages = [RUSIAN, ENGLISH, POLISH];
 
   const allTech = [SQL, PHP, JS, CSS, HTML];
   const allPrograms = [PHOTOSHOP, PREMIERPRO, LINUX, OFFICE, WINDOWS];
 
-  // DISPLAY
+  // DISPLAY TECH/PROGRAMS
   const display = function (list, el) {
     el === "learn" ? (el = document.querySelector(".allTech")) : (el = document.querySelector(".allPrograms"));
     el.innerHTML = "";
@@ -109,8 +136,25 @@ function showHomePage() {
       el.insertAdjacentHTML("afterbegin", pattern);
     });
   };
-
-  myPromise.then(displayHomePage()).then(display(allTech, "learn")).then(display(allPrograms, "programs"));
+  // Display languages
+  const displayLang = function (list) {
+    const langBox = document.querySelector(".languages");
+    langBox.innerHTML = "";
+    list.forEach((e) => {
+      const pattern = `
+      <div class="lang ${e.classname}">
+        <div class="lang-img">
+          <img src="${e.img}" alt="${e.classname} flag" />
+        </div>
+        <div class="lang-name">
+          <h3>${e.name}</h3>
+          <p>${e.knowledge}</p>
+        </div>
+      </div>`;
+      langBox.insertAdjacentHTML("afterbegin", pattern);
+    });
+  };
+  myPromise.then(displayHomePage()).then(display(allTech, "learn")).then(display(allPrograms, "programs")).then(displayLang(Languages));
 }
 showHomePage();
 
@@ -121,3 +165,5 @@ experienceBtn.addEventListener("click", () => {
 function showExperience() {
   content.innerHTML = "";
 }
+
+const displayFooter = function () {};
