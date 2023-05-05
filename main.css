@@ -95,8 +95,8 @@ svg:hover .svgFill {
   padding: 10px 10px 10px 10px;
   text-align: center;
 }
-
 /* NAVBAR END */
+
 /* MAIN CONTENT */
 .mainContent {
   color: white;
@@ -125,7 +125,7 @@ svg:hover .svgFill {
   width: 45%;
 }
 .aboutMe {
-  width: 100%;
+  width: 80%;
 }
 .card h3 {
   font-size: 1rem;
