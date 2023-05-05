@@ -3,6 +3,88 @@ const homeBtn = document.querySelector(".homeBtn");
 const experienceBtn = document.querySelector(".experience");
 const content = document.querySelector(".mainContent-content");
 
+//// DATA START ////
+//     TECH    //
+const JS = {
+  name: "JavaScript",
+  knowledge: "Dobrze",
+  progressBar: 50,
+};
+const HTML = {
+  name: "HTML",
+  knowledge: "Bardzo dobrze",
+  progressBar: 70,
+};
+const CSS = {
+  name: "CSS",
+  knowledge: "Bardzo dobrze",
+  progressBar: 70,
+};
+const PHP = {
+  name: "PHP",
+  knowledge: "Podstawy",
+  progressBar: 20,
+};
+const SQL = {
+  name: "SQL",
+  knowledge: "Podstawy",
+  progressBar: 20,
+};
+
+//     PROGRAMS    //
+const WINDOWS = {
+  name: "Windows",
+  knowledge: "Zaawansowane",
+  progressBar: 90,
+};
+const OFFICE = {
+  name: "Pakiet MS Office",
+  knowledge: "Bardzo dobrze",
+  progressBar: 60,
+};
+const LINUX = {
+  name: "Linux",
+  knowledge: "Dobrze",
+  progressBar: 40,
+};
+
+const PREMIERPRO = {
+  name: "Adobe Premier Pro",
+  knowledge: "Podstawy",
+  progressBar: 20,
+};
+const PHOTOSHOP = {
+  name: "Adobe Photoshop",
+  knowledge: "Podstawy",
+  progressBar: 15,
+};
+
+//     LANGUAGES   //
+const ENGLISH = {
+  classname: "emglish",
+  name: "Angielski",
+  knowledge: "Dobrze (B1)",
+  img: "../content/flags/en.png",
+};
+const POLISH = {
+  classname: "polish",
+  name: "Polski",
+  knowledge: "Narodowy",
+  img: "../content/flags/pl.png",
+};
+const RUSIAN = {
+  classname: "rusian",
+  name: "Rosyjski",
+  knowledge: "Podstawy",
+  img: "../content/flags/ru.png",
+};
+
+const Languages = [RUSIAN, ENGLISH, POLISH];
+const allTech = [SQL, PHP, JS, CSS, HTML];
+const allPrograms = [PHOTOSHOP, PREMIERPRO, LINUX, OFFICE, WINDOWS];
+// DATA END
+
+// MAIN HOMEPAGE FUNC START
 function showHomePage() {
   const myPromise = new Promise(() => {});
 
@@ -36,85 +118,7 @@ function showHomePage() {
   </div>`
     );
   };
-
-  // TECH
-  const JS = {
-    name: "JavaScript",
-    knowledge: "Dobrze",
-    progressBar: 50,
-  };
-  const HTML = {
-    name: "HTML",
-    knowledge: "Bardzo dobrze",
-    progressBar: 70,
-  };
-  const CSS = {
-    name: "CSS",
-    knowledge: "Bardzo dobrze",
-    progressBar: 70,
-  };
-  const PHP = {
-    name: "PHP",
-    knowledge: "Podstawy",
-    progressBar: 20,
-  };
-  const SQL = {
-    name: "SQL",
-    knowledge: "Podstawy",
-    progressBar: 20,
-  };
-  // PROGRAMS
-  const WINDOWS = {
-    name: "Windows",
-    knowledge: "Zaawansowane",
-    progressBar: 90,
-  };
-  const OFFICE = {
-    name: "Pakiet MS Office",
-    knowledge: "Bardzo dobrze",
-    progressBar: 60,
-  };
-  const LINUX = {
-    name: "Linux",
-    knowledge: "Dobrze",
-    progressBar: 40,
-  };
-
-  const PREMIERPRO = {
-    name: "Adobe Premier Pro",
-    knowledge: "Podstawy",
-    progressBar: 20,
-  };
-  const PHOTOSHOP = {
-    name: "Adobe Photoshop",
-    knowledge: "Podstawy",
-    progressBar: 15,
-  };
-  // Languages
-  const ENGLISH = {
-    classname: "emglish",
-    name: "Angielski",
-    knowledge: "Dobrze (B1)",
-    img: "../content/flags/en.png",
-  };
-  const POLISH = {
-    classname: "polish",
-    name: "Polski",
-    knowledge: "Narodowy",
-    img: "../content/flags/pl.png",
-  };
-  const RUSIAN = {
-    classname: "rusian",
-    name: "Rosyjski",
-    knowledge: "Podstawy",
-    img: "../content/flags/ru.png",
-  };
-  const Languages = [RUSIAN, ENGLISH, POLISH];
-
-  const allTech = [SQL, PHP, JS, CSS, HTML];
-  const allPrograms = [PHOTOSHOP, PREMIERPRO, LINUX, OFFICE, WINDOWS];
-
-  // DISPLAY TECH/PROGRAMS
+  // DISPLAY TECH/PROGRAMS START
   const display = function (list, el) {
     el === "learn" ? (el = document.querySelector(".allTech")) : (el = document.querySelector(".allPrograms"));
     el.innerHTML = "";
@@ -136,7 +140,8 @@ function showHomePage() {
       el.insertAdjacentHTML("afterbegin", pattern);
     });
   };
-  // Display languages
+  // DISPLAY TECH/PROGRAMS END
+  // DISPLAY LANGUAGES START
   const displayLang = function (list) {
     const langBox = document.querySelector(".languages");
     langBox.innerHTML = "";
@@ -154,16 +159,17 @@ function showHomePage() {
       langBox.insertAdjacentHTML("afterbegin", pattern);
     });
   };
+  // DISPLAY LANGUAGES END
   myPromise.then(displayHomePage()).then(display(allTech, "learn")).then(display(allPrograms, "programs")).then(displayLang(Languages));
 }
 showHomePage();
-
 homeBtn.addEventListener("click", showHomePage);
+// MAIN HOMEPAGE FUNC END
+// MAIN EXPERIENCE FUNC START
 experienceBtn.addEventListener("click", () => {
   content.innerHTML = "";
 });
 function showExperience() {
   content.innerHTML = "";
 }
-
-const displayFooter = function () {};
+// MAIN EXPERIENCE FUNC END

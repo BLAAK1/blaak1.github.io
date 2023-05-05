@@ -137,7 +137,7 @@ svg:hover .svgFill {
   padding: 0px 5px 5px 5px;
 }
 .card p {
-  font-size: small;
+  font-size: 1rem;
 }
 .tech {
   display: flex;
