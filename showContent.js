@@ -84,7 +84,7 @@ function showHomePage() {
     progressBar: 15,
   };
 
-  const allTech = [PHP, JS, CSS, HTML];
+  const allTech = [SQL, PHP, JS, CSS, HTML];
   const allPrograms = [PHOTOSHOP, PREMIERPRO, LINUX, OFFICE, WINDOWS];
 
   // DISPLAY
