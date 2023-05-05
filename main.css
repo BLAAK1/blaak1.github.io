@@ -252,6 +252,7 @@ svg:hover .svgFill {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .exp-child .work > * {
   margin: 0;
@@ -261,6 +262,8 @@ svg:hover .svgFill {
   padding-bottom: 10px;
 }
 .cert {
+  display: flex;
+  align-items: center;
   background: #191a21;
   width: 90%;
   margin-bottom: 10px;
