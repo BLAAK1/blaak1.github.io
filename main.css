@@ -263,8 +263,8 @@ svg:hover .svgFill {
 }
 .cert {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   background: #191a21;
   width: 90%;
   margin-bottom: 10px;
