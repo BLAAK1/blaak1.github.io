@@ -51,6 +51,11 @@ function showHomePage() {
     knowledge: "Podstawy",
     progressBar: 20,
   };
+  const SQL = {
+    name: "SQL",
+    knowledge: "Podstawy",
+    progressBar: 20,
+  };
   // PROGRAMS
   const WINDOWS = {
     name: "Windows",
@@ -59,7 +64,7 @@ function showHomePage() {
   };
   const OFFICE = {
     name: "Pakiet MS Office",
-    knowledge: "Dobrze",
+    knowledge: "Bardzo dobrze",
     progressBar: 60,
   };
   const LINUX = {
