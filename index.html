@@ -12,7 +12,8 @@
     <title>Oskar Zegar</title>
   </head>
   <body>
-    <script src="./main.js" defer></script>
+    <script src="./menuBtn.js" defer></script>
+    <script src="./showContent.js" defer></script>
     <main class="mainApp">
       <nav class="navbar">
         <div class="navbar--left">
@@ -21,13 +22,13 @@
           </span>
           <div class="navList">
             <ul>
-              <li>
+              <li class="experience">
                 <h2>DOŚWIADCZENIE</h2>
               </li>
-              <li>
+              <li class="projects">
                 <h2>PROJEKTY</h2>
               </li>
-              <li>
+              <li class="contact">
                 <h2>KONTAKT</h2>
               </li>
             </ul>
@@ -209,13 +210,13 @@
       <div class="hiddenMenu hidden">
         <div class="hiddenMenuList">
           <ul>
-            <li>
+            <li class="hiddenExperience hiddenEl" onclick="showExperience()">
               <h2>DOŚWIADCZENIE</h2>
             </li>
-            <li>
+            <li class="hiddenProjects hiddenEl">
               <h2>PROJEKTY</h2>
             </li>
-            <li>
+            <li class="hiddenContact hiddenEl">
               <h2>KONTAKT</h2>
             </li>
           </ul>
@@ -230,7 +231,7 @@
               <p>Aspirujący Frontend Deweloper</p>
             </div>
             <div class="myImg">
-              <img src="../content/placeholderImg.jpeg" />
+              <img src="../content/placeholderImg.jpeg" alt="Me" />
             </div>
             <div>
               <ul>

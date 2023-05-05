@@ -77,36 +77,7 @@ svg:hover .svgFill {
 .socialList--right .menuBtn svg {
   cursor: pointer;
 }
-@media screen and (max-width: 1100px) {
-  .navbar {
-    height: 60px;
-  }
-  .navbar .homeBtn {
-    width: 60px;
-  }
-}
-@media screen and (max-width: 610px) {
-  .mainApp {
-    width: 90vw;
-  }
-  .navbar {
-    height: 60px;
-  }
-  .navbar .homeBtn {
-    width: 60px;
-  }
-  div.navList {
-    display: none;
-  }
-  .menuBtn {
-    display: block;
-  }
-}
-@media screen and (min-width: 611px) {
-  .menuBtn {
-    display: none;
-  }
-}
+
 .hiddenMenu {
   margin-top: 5px;
   position: absolute;
@@ -127,12 +98,64 @@ svg:hover .svgFill {
   color: white;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 .mainContent--left {
   background: #1c1e27;
   padding: 0px 15px 0px 15px;
+  margin-top: 20px;
   border-radius: 8px;
+  height: fit-content;
+}
+.mainContent--left li {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0.2rem;
+}
+.mainContent--right {
+  margin: 20px 0px 0px 20px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 8px;
+  background: #1c1e27;
+}
+.card h3 {
+  font-size: 1rem;
+  border-bottom: 2px solid #795eb9;
+  width: fit-content;
+  padding: 0px 5px 5px 5px;
+}
+.card p {
+  font-size: small;
+}
+.tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.name {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.tech ul {
+  padding: 0;
+  list-style: none;
+}
+.tech .progressBar {
+  width: 100%;
+  height: 10px;
+  background: #191a21;
+  border-radius: 8px;
+}
+.tech .progressBar--inner {
+  height: 10px;
+  background-color: #795eb9;
+  border-radius: 8px;
+}
+.tech .progressBar:hover .progressBar--inner {
+  background-color: #8e6eda;
 }
 
 .hidden {
@@ -140,4 +163,56 @@ svg:hover .svgFill {
 }
 noscript {
   color: white;
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar {
+    height: 60px;
+  }
+  .navbar .homeBtn {
+    width: 60px;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 610px) {
+  .mainApp {
+    width: 90vw;
+  }
+  .navbar {
+    height: 60px;
+  }
+  .navbar .homeBtn {
+    width: 60px;
+  }
+  .navList {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+  .mainContent {
+    flex-direction: column;
+  }
+  .mainContent > * {
+    display: flex;
+    justify-content: center;
+  }
+  .mainContent--right {
+    margin: 20px 0px 0px 0px;
+    flex-direction: column;
+  }
+  .tech {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 611px) {
+  .menuBtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .tech {
+    flex-direction: column;
+  }
 }
