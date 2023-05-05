@@ -117,6 +117,12 @@ svg:hover .svgFill {
   border-radius: 8px;
   background: #1c1e27;
 }
+.card {
+  width: 45%;
+}
+.aboutMe {
+  width: 100%;
+}
 .card h3 {
   font-size: 1rem;
   border-bottom: 2px solid #795eb9;
@@ -214,5 +220,8 @@ noscript {
 @media screen and (max-width: 900px) {
   .tech {
     flex-direction: column;
+  }
+  .card {
+    width: 100%;
   }
 }
