@@ -116,6 +116,7 @@ svg:hover .svgFill {
   padding-bottom: 0.2rem;
 }
 .mainContent--right {
+  width: 100%;
   background: #191a21;
 }
 .mainContent-content {
@@ -223,6 +224,57 @@ svg:hover .svgFill {
 .footer a {
   text-decoration: none;
   color: #8e6eda;
+}
+.expierence {
+  display: flex;
+  flex-direction: column;
+}
+.exp-child {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  background: #191a21;
+  border-radius: 8px;
+  padding: 5px;
+}
+.exp-title h3 {
+  width: fit-content;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #795eb9;
+}
+.exp-child .when {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+.exp-child .work {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.exp-child .work > * {
+  margin: 0;
+  padding: 5px;
+}
+.certificates {
+  padding-bottom: 10px;
+}
+.cert {
+  background: #191a21;
+  width: 90%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.cert-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5px;
+}
+.cert-child > h3,
+p {
+  margin: 10px;
 }
 .hidden {
   display: none;

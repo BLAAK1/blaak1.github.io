@@ -1,6 +1,6 @@
 "use strict";
 const homeBtn = document.querySelector(".homeBtn");
-const experienceBtn = document.querySelector(".experience");
+const experienceBtn = document.querySelector(".experienceBtn");
 const content = document.querySelector(".mainContent-content");
 
 //// DATA START ////
@@ -78,10 +78,76 @@ const RUSIAN = {
   knowledge: "Podstawy",
   img: "../content/flags/ru.png",
 };
+//     EXPERIENCE   //
+const job1 = {
+  from: "09.2022",
+  to: "04.2023",
+  name: "Pomoc obsługi klienta",
+  employer: "Jarosław Truchan-Szostek",
+  city: "Paszczyna",
+  description: "Pomoc obsługi klienta na stacji Orlen MOP Paszczyna Północ",
+};
+const job2 = {
+  from: "05.2020",
+  to: "06.2020",
+  name: "Praktykant",
+  employer: `PPHU "Fenix " Kasperek Ryszard`,
+  city: "Brzeźnica",
+  description: "-Montaż i eksploatacja sieci komputerowej<br>-Serwisowanie komputerów",
+};
+const job3 = {
+  from: "10.2019",
+  to: "11.2019",
+  name: "Praktykant",
+  employer: `PPHU "Fenix " Kasperek Ryszard`,
+  city: "Brzeźnica",
+  description:
+    "Najważniejsze zadania:<br> -składanie komputerów<br> -diagnostyka uszkodzeń komputerów i laptopów<br> -wymiana podzespołów<br> -instalowanie oprogramowania<br> -pomoc w wyborze odpowiednich komponentów",
+};
+const school1 = {
+  from: "10.2022",
+  to: "Obecnie",
+  subject: "Informatyka",
+  type: "Studia inzynierskie",
+  name: "Wyższa Szkoła Informatyki i Zarządzania",
+  city: "Rzeszów",
+};
+const school2 = {
+  from: "09.2018",
+  to: "04.2022",
+  subject: "Technik-informatyk",
+  type: "Szkoła średnia",
+  name: "Technikum nr. 2",
+  city: "Ropczyce",
+};
+const cert1 = {
+  type: "Certyfikat",
+  when: "Maj 2020",
+  title: "NDG Linux Essentials",
+  from: "Cisco",
+  description: "",
+};
+const cert2 = {
+  type: "Kwalifikacja",
+  when: "Wrzesień 2021",
+  title: "EE.08",
+  from: "OKE",
+  description: "Montaż i eskploatacja systemów komputerowych, urządzeń peryferyjnych i sieci",
+};
+const cert3 = {
+  type: "Kwalifikacja",
+  when: "Marzec 2022",
+  title: "EE.09",
+  from: "OKE",
+  description: "Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych",
+};
 
 const Languages = [RUSIAN, ENGLISH, POLISH];
 const allTech = [SQL, PHP, JS, CSS, HTML];
 const allPrograms = [PHOTOSHOP, PREMIERPRO, LINUX, OFFICE, WINDOWS];
+const allJobs = [job3, job2, job1];
+const allSchools = [school2, school1];
+const allCerts = [cert1, cert2, cert3];
 // DATA END
 
 // MAIN HOMEPAGE FUNC START
@@ -166,10 +232,82 @@ showHomePage();
 homeBtn.addEventListener("click", showHomePage);
 // MAIN HOMEPAGE FUNC END
 // MAIN EXPERIENCE FUNC START
-experienceBtn.addEventListener("click", () => {
-  content.innerHTML = "";
-});
+
 function showExperience() {
   content.innerHTML = "";
+  content.insertAdjacentHTML(
+    "afterbegin",
+    `
+  <div class="expierience">
+    <div class="exp-title">
+      <h3>Doświadczenie zawodowe</h3>
+    </div>
+    <div class="exp-jobs"></div>
+  </div>
+  <div class="expierience">
+    <div class="exp-title">
+      <h3>Doświadczenie zawodowe</h3>
+    </div>
+    <div class="edu-steps"></div>
+  </div>
+  <div class="expierience">
+    <div class="exp-title">
+      <h3>Certyfikaty</h3>
+    </div>
+    <div class="certificates"></div>
+  </div>`
+  );
+  const experienceBox = document.querySelector(".exp-jobs");
+  allJobs.forEach((e) => {
+    const pattern = `<div class="exp-child">
+    <div class="when">
+      <p>Od: ${e.from} Do: ${e.to}</p>
+    </div>
+    <div class="work">
+      <h3>${e.name}</h3>
+      <p>${e.employer}, ${e.city}</p>
+      <p>${e.description}</p>
+    </div>
+  </div>`;
+    experienceBox.insertAdjacentHTML("afterbegin", pattern);
+  });
+
+  const schoolBox = document.querySelector(".edu-steps");
+  allSchools.forEach((e) => {
+    const pattern = `<div class="exp-child">
+    <div class="when">
+      <p>Od: ${e.from} Do: ${e.to}</p>
+    </div>
+    <div class="work">
+      <h3>${e.subject}, ${e.type}</h3>
+      <p>${e.name}, ${e.city}</p>
+    </div>
+  </div>`;
+    schoolBox.insertAdjacentHTML("afterbegin", pattern);
+  });
+  const certificatesBox = document.querySelector(".certificates");
+  allCerts.forEach((e) => {
+    const pattern = `<div class="exp-child">
+    <div class="cert">
+    <div class="cert-child">
+      <h3>${e.type} ${e.title}</h3>
+      <p>${e.when} <br>Wydane przez: ${e.from}</p>
+    </div>
+      <p>${e.description}</p>
+    </div>
+  </div>`;
+    certificatesBox.insertAdjacentHTML("afterbegin", pattern);
+  });
 }
+
+experienceBtn.addEventListener("click", showExperience);
+// showExperience();
 // MAIN EXPERIENCE FUNC END
+
+// const cert3 = {
+// type: "Certyfikat",
+//   when: "Marzec 2022",
+//   title: "EE.09",
+//   from: "OKE",
+//   description: "Programowanie, tworzenie i administrowanie stronami internetowymi i bazami danych",
+// };
