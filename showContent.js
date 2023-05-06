@@ -1,6 +1,7 @@
 "use strict";
 const homeBtn = document.querySelector(".homeBtn");
 const experienceBtn = document.querySelector(".experienceBtn");
+const projectsBtn = document.querySelector(".projectsBtn");
 const content = document.querySelector(".mainContent-content");
 
 //// DATA START ////
@@ -227,7 +228,7 @@ function showHomePage() {
   // DISPLAY LANGUAGES END
   myPromise.then(displayHomePage()).then(display(allTech, "learn")).then(display(allPrograms, "programs")).then(displayLang(Languages));
 }
-showHomePage();
+
 homeBtn.addEventListener("click", showHomePage);
 // MAIN HOMEPAGE FUNC END
 // MAIN EXPERIENCE FUNC START
@@ -301,3 +302,69 @@ function showExperience() {
 
 experienceBtn.addEventListener("click", showExperience);
 // MAIN EXPERIENCE FUNC END
+// MAIN PROJEKTS FUNC START
+//    DATA START    //
+const project1 = {
+  id: 0,
+  name: "Prosty kalkulator",
+  src: "../projects/calculator/index.html",
+  width: "25em",
+  height: "35em",
+};
+const project2 = {
+  id: 1,
+  name: "Generator haseł",
+  src: "../projects/passwdGen/index.html",
+  height: "100vh",
+  width: "100vw",
+};
+const allProjects = [project2, project1];
+//    DATA END    //
+
+function showProjects() {
+  content.innerHTML = "";
+  content.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="projects">
+              
+  </div>`
+  );
+  const projectPromise = new Promise(() => {});
+  function displayProjects() {
+    allProjects.forEach((e) => {
+      const projectsBox = document.querySelector(".projects");
+      const pattern = `<div class="project-child">
+      <div class="project exp-title">
+        <h3>${e.name}</h3>
+        <button class="openModal${e.id}">Otwórz</button>
+        <dialog class="modal${e.id}">
+          <div class="iframeBox">
+            <iframe src="${e.src}" height="${e.height}" width="${e.width}"></iframe>
+          </div>
+          <button class="closeModal${e.id} btn">Zamknij</button>
+        </dialog>
+      </div>
+    </div>`;
+      projectsBox.insertAdjacentHTML("afterbegin", pattern);
+    });
+  }
+  function projectsBtns() {
+    allProjects.forEach((e) => {
+      const openEl = document.querySelector(`.openModal${e.id}`);
+      const closeEl = document.querySelector(`.closeModal${e.id}`);
+      const el = document.querySelector(`.modal${e.id}`);
+      openEl.addEventListener("click", () => {
+        el.showModal();
+      });
+      closeEl.addEventListener("click", () => {
+        el.close();
+      });
+    });
+  }
+  projectPromise.then(displayProjects()).then(projectsBtns());
+}
+projectsBtn.addEventListener("click", () => {
+  showProjects();
+});
+// MAIN PROJEKTS FUNC END
+showHomePage();
