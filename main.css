@@ -338,7 +338,9 @@ button.btn {
 dialog button:hover {
   background: #242631;
 }
-
+dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
 .contact a {
   font-size: 1em;
   text-decoration: none;
