@@ -2,6 +2,7 @@
 const homeBtn = document.querySelector(".homeBtn");
 const experienceBtn = document.querySelector(".experienceBtn");
 const projectsBtn = document.querySelector(".projectsBtn");
+const contactBtn = document.querySelector(".contactBtn");
 const content = document.querySelector(".mainContent-content");
 
 //// DATA START ////
@@ -367,4 +368,51 @@ projectsBtn.addEventListener("click", () => {
   showProjects();
 });
 // MAIN PROJEKTS FUNC END
+function showContact() {
+  content.innerHTML = "";
+  const pattern = `<div class="contact">
+              <div class="telegram contact--card">
+                <div class="icon">
+                  <img src="../content/icons/telegram.svg">
+                </div>
+                <div class="info">
+                  <a href="https://t.me/Z0skar">Telegram</a>
+                </div>
+              </div>
+              <div class="e-mail contact--card">
+                <div class="icon">
+                  <img src="../content/icons/email.svg">
+                </div>
+                <div class="info">
+                  <a>zegaroskar@outlook.com</a>
+                </div>
+              </div>
+              <div class="linkedin contact--card">
+                <div class="icon">
+                  <img src="../content/icons/linkedin.svg">
+                </div>
+                <div class="info">
+                  <a href="https://www.linkedin.com/in/oskar-zegar-745362239/">Profil LinkedIn</a>
+                </div>
+              </div>
+              <div class="facebook contact--card">
+                <div class="icon">
+                  <img src="../content/icons/facebook.svg">
+                </div>
+                <div class="info">
+                  <a href="https://www.facebook.com/oskar.zegar.71/">Profil Facebook</a>
+                </div>
+              </div>
+              <div class="github contact--card">
+                <div class="icon">
+                  <img src="../content/icons/github.svg">
+                </div>
+                <div class="info">
+                  <a href="https://github.com/BLAAK1">Profil GitHub</a>
+                </div>
+              </div>
+            </div>`;
+  content.insertAdjacentHTML("afterbegin", pattern);
+}
+contactBtn.addEventListener("click", showContact);
 showHomePage();

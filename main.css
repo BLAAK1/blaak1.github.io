@@ -333,10 +333,39 @@ button.btn {
   background: #1c1e27;
   font-size: larger;
   cursor: pointer;
-  border: 1px dotted re;
+  border: 1px dotted rgba(0, 0, 0, 0);
 }
 dialog button:hover {
   background: #242631;
+}
+
+.contact a {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+.contact--card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #191a21;
+  border-radius: 8px;
+}
+.contact--card:nth-child(1) {
+  margin-top: 20px;
+}
+.contact--card .icon,
+.info {
+  padding: 10px;
 }
 
 .hidden {
