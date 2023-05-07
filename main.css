@@ -60,7 +60,7 @@ body {
 .navbar li {
   list-style: none;
   color: white;
-  font-size: 10px;
+  font-size: 0.625em;
   margin-left: 25px;
   cursor: pointer;
 }
@@ -349,7 +349,7 @@ dialog::backdrop {
   backdrop-filter: blur(2px);
 }
 .contact a {
-  font-size: 1em;
+  font-size: 1rem;
   text-decoration: none;
   color: white;
 }
