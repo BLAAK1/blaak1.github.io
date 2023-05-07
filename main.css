@@ -96,6 +96,9 @@ svg:hover .svgFill {
   padding: 10px 10px 10px 10px;
   text-align: center;
 }
+.sr-only {
+  display: none;
+}
 /* NAVBAR END */
 
 /* MAIN CONTENT */
@@ -110,6 +113,10 @@ svg:hover .svgFill {
   margin-top: 20px;
   border-radius: 8px;
   height: fit-content;
+}
+.mainContent--left img {
+  width: 242px;
+  height: 208px;
 }
 .mainContent--left li {
   position: relative;
