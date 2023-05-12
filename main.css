@@ -326,8 +326,8 @@ dialog {
   padding: 0;
 }
 dialog iframe {
-  height: 35em;
-  width: 25em;
+  /* height: 35em;
+  width: 23em; */
   border: none;
 }
 .iframeBox {

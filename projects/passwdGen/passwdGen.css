@@ -13,7 +13,7 @@ body {
 }
 #passwordLenght {
   height: 8vh;
-  width: 80vw;
+  width: 90vw;
   outline: none;
   border: 2px solid #795eb9;
   border-radius: 8px;
@@ -56,14 +56,13 @@ textarea {
   border: 2px solid #795eb9;
   border-radius: 8px;
   text-align: center;
-  width: 330px;
-  height: 120px;
   color: white;
-  font-size: large;
 
-  min-height: 110px;
+  width: 330px;
   min-width: 300px;
+  max-width: 310px;
 
-  max-height: 319px;
-  max-width: 312px;
+  height: 120px;
+  min-height: 110px;
+  max-height: 300px;
 }

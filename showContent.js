@@ -309,15 +309,15 @@ const project1 = {
   id: 0,
   name: "Prosty kalkulator",
   src: "../projects/calculator/index.html",
-  width: "25em",
-  height: "35em",
+  width: "355px",
+  height: "525px",
 };
 const project2 = {
   id: 1,
   name: "Generator haseł",
   src: "../projects/passwdGen/index.html",
-  height: "100vh",
-  width: "100vw",
+  width: "355px",
+  height: "525px",
 };
 const allProjects = [project2, project1];
 //    DATA END    //
@@ -340,7 +340,7 @@ function showProjects() {
         <button class="openModal${e.id}">Otwórz</button>
         <dialog class="modal${e.id}">
           <div class="iframeBox">
-            <iframe src="${e.src}" height="${e.height}" width="${e.width}"></iframe>
+            <iframe height="${e.height}" width="${e.width}" src="${e.src}"></iframe>
           </div>
           <button class="closeModal${e.id} btn">Zamknij</button>
         </dialog>
