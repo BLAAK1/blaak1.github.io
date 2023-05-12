@@ -247,7 +247,7 @@ function showExperience() {
   </div>
   <div class="expierience">
     <div class="exp-title">
-      <h3>Doświadczenie zawodowe</h3>
+      <h3>Wykształcenie</h3>
     </div>
     <div class="edu-steps"></div>
   </div>
