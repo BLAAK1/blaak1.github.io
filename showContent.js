@@ -110,7 +110,7 @@ const school1 = {
   from: "10.2022",
   to: "Obecnie",
   subject: "Informatyka",
-  type: "Studia inzynierskie",
+  type: "Studia inżynierskie",
   name: "Wyższa Szkoła Informatyki i Zarządzania",
   city: "Rzeszów",
 };
